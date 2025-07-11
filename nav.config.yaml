@@ -48,4 +48,4 @@ mailConfig:
   message: 有用户提交网站收录啦
 
 # 自有部署
-XFAPIPassword: ''
+XFAPIPassword: 'nimabi'
