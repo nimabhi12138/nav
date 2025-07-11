@@ -25,10 +25,10 @@ imageRepoUrl: ''
 hashMode: false
 
 # 一旦填写认为你是自有部署，Fork 不要填写
-address: ''
+address: '/'
 
 # 自有部署后台登录密码
-password: admin
+password: Nihaoma1851.
 
 # 自有部署启动端口
 port: 7777
