@@ -115,6 +115,10 @@
 
 #### Cloudflare pages 推荐(免费)
 
+1、登录 Cloudflare 控制台并创建 Pages 项目，选择你的 Git 仓库。
+2、在 **Build command** 中填写 `npm run build`，**Build output directory** 填写 `dist/browser`。
+3、在 **Environment variables** 中添加 `NODE_VERSION=22`，然后开始部署。
+
 [https://www.cloudflare.com/zh-cn](https://www.cloudflare.com/zh-cn)
 
 ## 配置说明

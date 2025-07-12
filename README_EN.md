@@ -115,6 +115,10 @@ build path `dist/browser`
 
 #### Cloudflare pages (Recommended, Free)
 
+1. Log in to Cloudflare and create a Pages project connected to your Git repository.
+2. Set **Build command** to `npm run build` and **Build output directory** to `dist/browser`.
+3. Add `NODE_VERSION=22` in **Environment variables**, then start the deployment.
+
 [https://www.cloudflare.com](https://www.cloudflare.com)
 
 ## Configuration
