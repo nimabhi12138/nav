@@ -119,6 +119,14 @@ build path `dist/browser`
 2. Set **Build command** to `npm run build` and **Build output directory** to `dist/browser`.
 3. Add `NODE_VERSION=22` in **Environment variables**, then start the deployment.
 
+> When the `address` field in `nav.config.yaml` is enabled, you must run the backend locally:
+>
+> ```bash
+> npm run server
+> ```
+>
+> Deploying only the static pages will result in 405 errors for API requests.
+
 [https://www.cloudflare.com](https://www.cloudflare.com)
 
 ## Configuration

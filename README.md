@@ -119,6 +119,14 @@
 2、在 **Build command** 中填写 `npm run build`，**Build output directory** 填写 `dist/browser`。
 3、在 **Environment variables** 中添加 `NODE_VERSION=22`，然后开始部署。
 
+> 如果 `nav.config.yaml` 中开启了 `address` 字段，需要同时启动后端服务：
+>
+> ```bash
+> npm run server
+> ```
+>
+> 仅使用 Pages 静态部署会导致后台接口返回 405。
+
 [https://www.cloudflare.com/zh-cn](https://www.cloudflare.com/zh-cn)
 
 ## 配置说明
