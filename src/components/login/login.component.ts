@@ -83,7 +83,7 @@ export class LoginComponent {
 
   async login(): Promise<void> {
     const token = this.token.trim()
-    if (!token) {
+    if (!token && !isSelfDevelop) {
       this.message.error($t('_pleaseInputToken'))
       return
     }
@@ -112,13 +112,13 @@ export class LoginComponent {
     this.submitting = true
 
     try {
-      const res = await verifyToken(token)
-      if (
-        !isSelfDevelop &&
-        (res?.data?.login ?? res?.data?.username) !== authorName
-      ) {
-        this.message.error('Bad credentials')
-        throw new Error('Bad credentials')
+      let res: any
+      if (!isSelfDevelop) {
+        res = await verifyToken(token)
+        if ((res?.data?.login ?? res?.data?.username) !== authorName) {
+          this.message.error('Bad credentials')
+          throw new Error('Bad credentials')
+        }
       }
       setToken(token)
 
