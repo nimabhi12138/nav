@@ -94,7 +94,9 @@ httpInstance.interceptors.response.use(
   },
 )
 
-export const HTTP_BASE_URL = 'https://api.nav3.cn'
+// Change the default API base url to relative path to avoid
+// sending data to external servers by default.
+export const HTTP_BASE_URL = '/api'
 
 const httpNavInstance = axios.create({
   timeout: 15000,
